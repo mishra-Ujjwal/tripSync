@@ -3,7 +3,9 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  font-family: "Alegreya SC", serif;
 }
+/* color #0249AE  #3B82F6 #F9FAFB*/
 
 .logo {
   height: 6em;
