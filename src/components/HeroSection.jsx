@@ -68,15 +68,19 @@ const HeroSection = () => {
 
         {/* Who's Traveling */}
         <div>
-          <label className="block text-lg font-semibold mb-2">Who's traveling</label>
+          <label className="block text-lg font-semibold mb-2">No. of persons</label>
           <select className="w-full px-4 py-3 border  outline-none rounded-xl">
-            <option>Solo</option>
-            <option>Couple</option>
-            <option>Family</option>
-            <option>Friends</option>
+            <option>1</option>
+            <option>2</option>
+            <option>3</option>
+            <option>4</option>
+            <option>5</option>
+            <option>6+</option>
+
           </select>
         </div>
    
+   <div></div>
         {/* Submit Button */}
         <div className="flex items-end">
           <button

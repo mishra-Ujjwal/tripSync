@@ -20,9 +20,8 @@ const Home = () => {
     return () => clearInterval(interval); // cleanup
   }, []);
   return (
-    <section className={` bg-center bg-cover w-[100vw] h-[100vh] px-2 md:px-10 lg:px-20 `}   style={{ backgroundImage: `url("/images/image2.png")` }} >
-        <div><Navbar/></div>
-        <div className='sm:pt-30 pt-25'><HeroSection/></div>
+    <section  >
+        <div className='sm:pt-20 pt-25'><HeroSection/></div>
     </section>
 
   )
