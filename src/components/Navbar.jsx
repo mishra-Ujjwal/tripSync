@@ -1,24 +1,30 @@
 import React from 'react'
-import { FaUserCircle } from "react-icons/fa";
+import { Link } from "react-router-dom";
+import logo from '../assets/logo.png'
+
 const Navbar = () => {
   return (
-    <section className='fixed top-3 left-3 right-3 h-15 md:left-10 md:right-10 sm:top-4 lg:left-20 lg:right-20  rounded-3xl bg-white/80 shadow-lg z-50 '>
-        <div className='px-5 py-2 flex items-center justify-between'>
-            <div className="logo">
-             <img src="/images/logo.png" alt="" className='w-30' />
-            </div>
-            <div className="hidden sm:flex menu items-center gap-10 text-lg" >
-                <div>Home</div>
-                <div>Holiday Packages</div>
-                <div>About </div>
-                <div>Contact Us</div>
-            </div>
-            <div className="login flex items-center gap-3  sm:text-lg">
-                 <div className='px-3 py-2 bg-[#0249AE] text-white flex items-center gap-3 rounded-4xl cursor-pointer'>SignUp    <FaUserCircle className='text-2xl '/></div>
-               
-            </div>
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[90%] md:w-[80%] lg:w-[70%] bg-white/80 backdrop-blur-lg shadow-lg rounded-full z-50">
+      <div className="flex items-center justify-between px-6 py-3">
+        {/* Logo */}
+        <Link to="/" className="flex items-center gap-2">
+          <img src={logo} alt="Trip Planner Logo" className="h-8 md:h-10" />
+        </Link>
+
+        {/* Links */}
+        <div className="hidden md:flex gap-8 text-gray-700 font-medium items-center">
+          <Link to="/" className="hover:text-blue-600 transition">Home</Link>
+          <Link to="/planner" className="hover:text-blue-600 transition">Planner</Link>
+          <Link to="/destinations" className="hover:text-blue-600 transition">Destinations</Link>
+          <Link to="/login" className="bg-blue-600 text-white px-4 py-2 rounded-full hover:bg-blue-700 transition">Login</Link>
         </div>
-    </section>
+
+        {/* Mobile Menu Icon (for later if needed) */}
+        <button className="md:hidden p-2 rounded-lg hover:bg-gray-100">
+          ☰
+        </button>
+      </div>
+    </nav>
   )
 }
 

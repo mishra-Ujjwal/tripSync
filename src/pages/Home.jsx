@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar'
 import HeroSection from '../components/HeroSection'
+import Planner from '../components/Planner.jsx'
+import Destinations from '../components/Destinations.jsx';
+import Footer from '../components/Footer.jsx';
 
 const Home = () => {
     const images = [
@@ -20,10 +22,23 @@ const Home = () => {
     return () => clearInterval(interval); // cleanup
   }, []);
   return (
-    <section  >
-        <div className='sm:pt-20 pt-25'><HeroSection/></div>
+    <>
+    <section>
+    <HeroSection/>
+    </section>
+    
+    <section>
+    <Planner />
     </section>
 
+    <section>
+    <Destinations />
+    </section>
+
+    <section>
+    <Footer />
+    </section>
+    </>
   )
 }
 

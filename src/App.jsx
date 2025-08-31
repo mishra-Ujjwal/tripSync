@@ -1,15 +1,17 @@
 import React from 'react'
 import Home from './pages/Home'
 import Navbar from './components/Navbar'
-import { Outlet } from 'react-router-dom'
+import './App.css'
+import HeroSection from './components/HeroSection'
+import { Outlet } from 'react-router'
 
 const App = () => {
   return (
-    <div className={`px-4  h-auto sm:h-screen sm:px-[5%] bg-center bg-cover`}   style={{ backgroundImage: `url("/images/image2.png")` }}>
-     <Navbar/>
-     <div className='sm:pt-10'>
-      <Outlet/>
-     </div>
+    <div>
+      <Navbar />
+      <div>
+        <Outlet />
+      </div>
     </div>
   )
 }
