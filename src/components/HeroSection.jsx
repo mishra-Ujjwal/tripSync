@@ -1,93 +1,74 @@
 import React from "react";
+import './HeroSection.css'
 const HeroSection = () => {
     
   return (
-    <section className="max-w-7xl mx-auto px-2 sm:px-10 py-5 sm:py-20 bg-white/60 shadow-2xl  rounded-2xl">
-        <h1 className="sm:text-3xl text-xl font-medium pb-5">Where Do You Want to Go?</h1>
-      <form className="grid grid-cols-1 md:grid-cols-3 gap-6">
-    
-        {/* Destination */}
-        <div>
-          <label className="block text-lg font-semibold mb-2">Destination</label>
-          <input
-            type="text"
-            placeholder="Enter destination"
-            className="w-full px-4 py-3 border  outline-none rounded-xl placeholder-black"
+   <div>
+ 
 
-          />
-        </div>
+      {/* Hero Section */}
+      <div className="flex flex-col md:flex-row items-center justify-between px-8 md:px-20 pt-32 md:pt-40">
 
-        {/* Start Date */}
-        <div className="sm:block hidden">
-          <label className="block text-lg font-semibold mb-2">Start Date</label>
-          <input type="date" className="w-full px-4 py-3 border  outline-none rounded-xl" />
-        </div>
-
-        {/* End Date */}
-        <div className="sm:block hidden">
-          <label className="block text-lg font-semibold mb-2">End Date</label>
-          <input type="date" className="w-full px-4 py-3 border  outline-none rounded-xl" />
-        </div>
-
-        {/* for mobile */}
-        <div className="sm:hidden flex flex-wrap gap-1">
-<div className="sm:hidden block">
-          <label className="block text-lg font-semibold mb-2">Start Date</label>
-          <input type="date" className="w-full px-4 py-3 border  outline-none rounded-xl" />
+        {/* Left Content */}
+        <div className="text-white max-w-lg">
+          <h1 className="text-5xl font-bold leading-tight">
+            Plan Your Perfect <span className="text-yellow-300">Adventure</span>
+          </h1>
+          <p className="mt-6 text-lg text-gray-100">
+            Create detailed itineraries, discover amazing destinations, and make
+            every moment of your journey unforgettable with our intelligent trip
+            planning tools.
+          </p>
+          <div className="mt-8 ml-20 flex space-x-4">
+            <button className="bg-blue-600 px-6 py-3 rounded-lg text-white font-semibold hover:bg-blue-700 transition">
+              Start Planning Free
+            </button>
+            <button className="border border-white px-6 py-3 rounded-lg text-white hover:bg-white hover:text-indigo-600 transition">
+              Watch Demo
+            </button>
+          </div>
         </div>
 
-        {/* End Date */}
-        <div className="sm:hidden block">
-          <label className="block text-lg font-semibold mb-2">End Date</label>
-          <input type="date" className="w-full px-4 py-3 border  outline-none rounded-xl" />
-        </div>
-        </div>
+        {/* Right Card */}
+        <div className="bg-white p-6 rounded-2xl shadow-lg w-full md:w-96 mt-12 md:mt-0">
+          <h2 className="text-xl font-bold mb-2">Quick Trip Planner</h2>
+          <p className="text-gray-500 mb-4">Where do you want to go?</p>
 
-        {/* Travel Style */}
-        <div>
-          <label className="block text-lg font-semibold mb-2">Travel style</label>
-          <select className="w-full px-4 py-3 border  outline-none rounded-xl">
-            <option>Adventure</option>
-            <option>Relaxation</option>
-            <option>Luxury</option>
-            <option>Budget</option>
-          </select>
-        </div>
+          <form className="space-y-4">
+            <input
+              type="text"
+              placeholder="Enter city or country"
+              className="w-full p-3 border rounded-lg"
+            />
 
-        {/* Travel Mode */}
-        <div>
-          <label className="block text-lg font-semibold mb-2">Travel Mode</label>
-          <select className="w-full px-4 py-3 border outline-none rounded-xl">
-            <option>Flight</option>
-            <option>Train</option>
-            <option>Car</option>
-            <option>Bus</option>
-          </select>
-        </div>
+            <input
+              type="text"
+              placeholder="Enter number of people"
+              className="w-full p-3 border rounded-lg"
+            />
 
-        {/* Who's Traveling */}
-        <div>
-          <label className="block text-lg font-semibold mb-2">Who's traveling</label>
-          <select className="w-full px-4 py-3 border  outline-none rounded-xl">
-            <option>Solo</option>
-            <option>Couple</option>
-            <option>Family</option>
-            <option>Friends</option>
-          </select>
+            <div className="flex space-x-2">
+              <input
+                type="date"
+                className="w-1/2 p-3 border rounded-lg"
+              />
+              <input
+                type="date"
+                className="w-1/2 p-3 border rounded-lg"
+              />
+            </div>
+
+            <button
+              type="submit"
+              className="w-full bg-blue-600 text-white py-3 rounded-lg font-semibold hover:bg-blue-700 transition"
+            >
+              Create Itinerary
+            </button>
+          </form>
         </div>
-   
-        {/* Submit Button */}
-        <div className="flex items-end">
-          <button
-            type="submit"
-            className="w-full py-3 bg-[#0249AE] hover:bg-blue-700 text-white font-semibold rounded-xl shadow-lg transition"
-          >
-            Plan My Trip
-          </button>
-        </div>
-      </form>
-    </section>
+      </div>
+      </div>
   );
 };
 
-export default HeroSection;
+export default Home;
